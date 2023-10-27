@@ -13,7 +13,7 @@ pipeline {
     stages {
         
 
-        stage('notification') {
+        stage('notification1') {
             steps {
                 slackSend channel: 'lmsupdates', color: '#4518d9', message: 'slackSend "pipeline has been started ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"', teamDomain: 'internship-2022-hq', tokenCredentialId: 'slackuser'
             }
