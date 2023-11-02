@@ -38,10 +38,6 @@ pipeline {
                   sh 'docker run -dt -p 80:80 --name fe anesoor98/frontend-lms'
             }
         }
-         stage('notification') {
-            steps {
-                slackSend channel: 'lmsupdates', color: '#4518d9', message: 'slackSend "deployed succussfully ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"', teamDomain: 'internship-2022-hq', tokenCredentialId: 'slackuser'
-            }
-        }
+        
     }
 }
