@@ -1,5 +1,3 @@
-Jenkinsfile for frontend
-
 pipeline {
     agent {
       label 'docker'
